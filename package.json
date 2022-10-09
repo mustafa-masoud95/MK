@@ -7,6 +7,7 @@
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "swiper": "^8.4.3",
     "vue": "^3.2.38",
     "vue-owl-carousel": "^2.0.3",

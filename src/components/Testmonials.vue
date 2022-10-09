@@ -1,50 +1,51 @@
 <template>
-<main class="bg-blue-300 w-full h-full ">
-<div class="container mx-auto py-8 px-8 h-full " >
+<main class="bg-navBg w-full h-full ">
+<div class="container mx-auto my-4 px-4 py-2 h-full  "   data-aos="zoom-in"  data-aos-duration="3000" >
 
   <div class=" flex  justify-between">
     <p></p>
-    <h1 class="text-mainText font-extrabold text-xl tracking-wider">See what clients are saying about us...</h1>
+    <h1 class="text-mainText font-extrabold  text-sm tracking-wider">See what clients are saying about us...</h1>
     <img src="../assets/“.png" alt="">
 </div>
   <swiper
     :modules="modules"
    :breakpoints="breakpoints"
-    :slides-per-view="2"
-    :space-between="10"
+    :slides-per-view="1.5"
+    :space-between="50"
     navigation
     :pagination="{ clickable: true }"
 
     @swiper="onSwiper"
     @slideChange="onSlideChange" 
-    class=" flex flex-wrap items-center justify-center h-full"
+    class=" flex flex-wrap w-full  h-full text-sm"
+
     >
     <swiper-slide>
-      <div id="content">
-        <div class="testimonial">
-        <blockquote>
-   Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+      <div id="content ">
+        <div class="testimonial  text-test bg-testBg w-full lg:w-5/6   shadow-lg">
+        <blockquote class=" w-3/6">
+   Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.vel scelerisque nisl consectetur et.vel scelerisque nisl consectetur et.
         </blockquote>
-        <div></div>
-        <div class="w-96 h-96 rounded-full bg-white ">
-          <img src="https://www.kindpng.com/picc/m/780-7804962_cartoon-avatar-png-image-transparent-avatar-user-image.png" alt="" class="h-full w-full">
-        </div> 
-        </div>
-        </div>
+      </div>
+    </div>
+    <div class="arr"></div>
+    <div class="w-16 h-16 rounded-full flex items-center justify-center">
+      <img src="https://www.kindpng.com/picc/m/780-7804962_cartoon-avatar-png-image-transparent-avatar-user-image.png" alt="" class="h-full w-full">
+    </div> 
     </swiper-slide>
     <swiper-slide>
       <div id="content">
-        <div class="testimonial">
+        <div class="testimonial  w-full lg:w-5/6  text-test grid bg-testBg rounded items-center justify-center w-6/6 shadow-lg">
         <blockquote>
-Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+          Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.vel scelerisque nisl consectetur et.vel scelerisque nisl consectetur et.
         </blockquote>
-        <div></div>
-     
-         <div class="w-full h-full rounded-full  ">
-          <img src="https://www.kindpng.com/picc/m/780-7804962_cartoon-avatar-png-image-transparent-avatar-user-image.png" alt="" class="h-full w-full">
-        </div> 
         
-        </div>
+        
+      </div>
+      <div class="arr"></div>
+      <div class="w-16 h-16 rounded-full flex items-center justify-center">
+        <img src="https://www.kindpng.com/picc/m/780-7804962_cartoon-avatar-png-image-transparent-avatar-user-image.png" alt="" class="h-full w-full">
+      </div> 
         </div>
     </swiper-slide>
     
@@ -75,11 +76,19 @@ import {ref,onMounted} from 'vue'
     setup() {
     
       let breakpoints = ref({
+        100:{
+          slidesPerView:1,
+
+        },
         300:{
           slidesPerView:1,
 
         },
         700:{
+          slidesPerView:1,
+
+        },
+        850:{
           slidesPerView:2,
 
         },
@@ -111,24 +120,17 @@ import {ref,onMounted} from 'vue'
 
 
 .testimonial blockquote {
-  margin: 10px 10px 0;
-  background: #efefef;
-  padding: 20px 60px;
+
+ 
+padding:8px;
   position: relative;
   border: none;
   border-radius: 8px;
-  font-style: italic;
+  width: 100%;
+  align-items: justify;
+ 
 }
 
-.testimonial blockquote:before,
-.testimonial blockquote:after {
-  content: "\201C";
-  position: absolute;
-  font-size: 80px;
-  line-height: 1;
-  color: #757f9a;
-  font-style: normal;
-}
 
 .testimonial blockquote:before {
   top: 0;
@@ -141,13 +143,14 @@ import {ref,onMounted} from 'vue'
   bottom: -0.5em;
 }
 
-.testimonial div {
+.arr{
   width: 0;
   height: 0;
   border-left: 0 solid transparent;
   border-right: 20px solid transparent;
-  border-top: 20px solid #efefef;
+  border-top: 20px solid #C4C4C4;
   margin: 0 0 0 60px;
+ 
 }
 
 .testimonial p {

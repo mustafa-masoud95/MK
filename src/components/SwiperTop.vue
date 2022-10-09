@@ -1,37 +1,37 @@
 <template>
-  <div class="relative  w-full flex items-center justify-center sw">
+  <div class="absolute bottom-1/4  w-full flex items-center justify-center ">
     <swiper
       :modules="modules"
-      :slides-per-view="3"
-      :space-between="50"
+      :slides-per-view="2.5"
+      :space-between="20"
       navigation
       :pagination="{ clickable: true }"
       @swiper="onSwiper"
       @slideChange="onSlideChange"
-      class="w-4/6 absolute bottom-0"
+      class="w-4/6 sw"
     >
       <swiper-slide>
         <div
           :class="active ? 'active' : 'not active'"
-          class="bg-cyan-100 rounded-lg flex items-center justify-center shadow-md h-full"
+          class="bg-cyan-100 rounded-lg flex items-center justify-center shadow-md h-full cursor-pointer"
         >
-          <img src="../assets/Asset 1 1.png" alt="" class="rounded-lg" />
+          <img src="../assets/Asset 1 1.png" alt="" class="rounded-lg " />
         </div>
       </swiper-slide>
       <swiper-slide>
         <div
           :class="active ? 'active' : 'not active'"
-          class="bg-cyan-100 rounded shadow-md flex items-center justify-center h-full"
+          class="bg-cyan-100 rounded shadow-md flex items-center justify-center h-full cursor-pointer"
         >
-          <img src="../assets/_Group_ (1).png" alt="" class="rounded-lg" />
+          <img src="../assets/_Group_ (1).png" alt="" class="rounded-lg " />
         </div>
       </swiper-slide>
       <swiper-slide>
         <div
           :class="active ? 'active' : 'not active'"
-          class="bg-cyan-100 rounded-lg flex items-center justify-center shadow-md h-full"
+          class="bg-cyan-100 rounded-lg flex items-center justify-center shadow-md h-full cursor-pointer"
         >
-          <img src="../assets/Слой 1.png" alt="" class="rounded-lg" />
+          <img src="../assets/Слой 1.png" alt="" class="rounded-lg " />
         </div>
       </swiper-slide>
       ...
@@ -100,11 +100,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 .sw {
   position: absolute;
-top:0
+
 }
-.active {
-  transform: scaleY(1.01);
-}
+
 </style>
 
 <!-- 

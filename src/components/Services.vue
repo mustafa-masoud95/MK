@@ -1,7 +1,7 @@
 <template>
     <div class=" flex  items-center justify-center ">
-       
-        <section class=" flex flex-wrap gap-8 justify-around items-center " >
+      
+        <section data-aos="fade-down" class=" flex flex-wrap gap-8 justify-around items-center " >
            <div class="flex items-center justify-center">
             <div class="">
                 <img src="../assets/Orient.png" alt="">
