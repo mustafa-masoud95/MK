@@ -10,8 +10,8 @@
   <swiper
     :modules="modules"
    :breakpoints="breakpoints"
-    :slides-per-view="1.5"
-    :space-between="50"
+    :slides-per-view="2"
+    :space-between="10"
     navigation
     :pagination="{ clickable: true }"
 
@@ -22,8 +22,8 @@
     >
     <swiper-slide>
       <div id="content ">
-        <div class="testimonial  text-test bg-testBg w-full lg:w-5/6   shadow-lg">
-        <blockquote class=" w-3/6">
+        <div class="testimonial  text-test bg-testBg w-full rounded lg:w-5/6  lg:p-4  shadow-lg">
+        <blockquote class="">
    Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.vel scelerisque nisl consectetur et.vel scelerisque nisl consectetur et.
         </blockquote>
       </div>
@@ -35,7 +35,7 @@
     </swiper-slide>
     <swiper-slide>
       <div id="content">
-        <div class="testimonial  w-full lg:w-5/6  text-test grid bg-testBg rounded items-center justify-center w-6/6 shadow-lg">
+        <div class="testimonial  w-full lg:w-5/6  text-test grid bg-testBg  rounded lg:p-4 items-center justify-center w-6/6 shadow-lg">
         <blockquote>
           Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.vel scelerisque nisl consectetur et.vel scelerisque nisl consectetur et.
         </blockquote>
